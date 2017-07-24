@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.6)
+project(GitGood)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES main.cpp Algorithms/Sources/GGStringExtend.cpp Algorithms/Headers/GGStringExtend.h Tools/Sources/Utilities.cpp Tools/Headers/Utilities.h Tools/Sources/BigO.cpp Tools/Headers/BigO.h Algorithms/Sources/sort.cpp Algorithms/Headers/sort.h DataStructures/Graph/BaseClasses/Sources/graphs.cpp DataStructures/Graph/BaseClasses/Headers/Graphs.h DataStructures/Graph/BaseClasses/Sources/undirectedgraph.cpp DataStructures/Graph/BaseClasses/Headers/UGraph.h Resources/Sources/global.cpp DataStructures/Graph/Resources/Sources/graphMessages.cpp DataStructures/Graph/Resources/Headers/graphMessages.h Resources/Sources/messages.cpp Resources/Headers/messages.h Algorithms/Graphs/Itterative/Source/DFS.cpp Algorithms/Graphs/Itterative/Headers/DFS.h CrackingTheCodingInterview/Graphs/Graph.cpp CrackingTheCodingInterview/Graphs/Graph.h CrackingTheCodingInterview/Trees/Tree.cpp CrackingTheCodingInterview/Trees/Tree.h)
+add_executable(GitGood ${SOURCE_FILES} Algorithms/Sources/GGStringExtend.cpp Algorithms/Headers/GGStringExtend.h Tools/Sources/Utilities.cpp Tools/Headers/Utilities.h Tools/Sources/BigO.cpp Tools/Headers/BigO.h DataStructures/Graph/BaseClasses/Sources/undirectedgraph.cpp DataStructures/Graph/BaseClasses/Headers/UGraph.h)
