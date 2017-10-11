@@ -1,0 +1,174 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <parent>
+    <groupId>com.gitgood</groupId>
+    <artifactId>gitgood</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <versionTicker>1.0.0</versionTicker>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+
+  <groupId>com.gitgood.crackingthecodinginterview</groupId>
+  <artifactId>crackingthecodinginterview</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <inceptionYear>2017</inceptionYear>
+  <packaging>pom</packaging>
+
+  <name>crackingthecodinginterview</name>
+  <description>A complete implementation of cracking the coding interview's interview problems, with solutions to every question. This is the java implementation</description>
+  <url>https://dalinwilliams.com/gitgood/crackingthecodinginterview</url>
+  <organization>
+    <name>CircIt</name>
+    <url>https://www.dalinwilliams.com/circit</url>
+  </organization>
+  <developers>
+    <developer>
+      <name>Dalin Williams</name>
+      <url>https://www.dalinwilliams.com</url>
+      <email>gitgood@dalinwilliams.com</email>
+      <timezone>America/Los_Angeles(-8)</timezone>
+      <roles>
+        <role>Founder</role>
+        <role>Engineer</role>
+        <role>Psychopath</role>
+      </roles>
+      <organizationUrl>https://gitgood.com/java/crackingthecodinginterview</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/funkeyfreak/GitGood/tree/master/Languages/Java/crackingthecodinginterview</url>
+    <tag>crackingthecodinginterview</tag>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <modules>
+    <module>bigo</module>
+    <module>arraysandstrings</module>
+    <module>mainapp</module>
+  </modules>
+
+
+  <build>
+    <sourceDirectory>../src/main/java</sourceDirectory>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.0.0-M1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.0.2</version>
+          <configuration>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+
+        <configuration>
+
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.3.1</version>
+        <configuration>
+          <outputDirectory>./build</outputDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.gitgood.crackingthecodinginterview.bigo</groupId>
+      <artifactId>bigo</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.gitgood.crackingthecodinginterview.arraysandstrings</groupId>
+      <artifactId>arraysandstrings</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.gitgood.crackingthecodinginterview.mainapp</groupId>
+      <artifactId>mainapp</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <version>3.0.0-M1</version>
+      <scope>site</scope>
+    </dependency>
+  </dependencies>
+
+</project>
